@@ -40,3 +40,4 @@ melancia = sum(grepl("Melancia", fruta_gosta))
 kiwi = sum(grepl("Kiwi", fruta_gosta))
 pera = sum(grepl("Pera", fruta_gosta))
 nenhuma = sum(grepl("Nenhuma das frutas mencionadas", fruta_gosta))
+
