@@ -3,3 +3,23 @@
 # Leitura do banco de dados
 dados = read.csv("dados - respostas formulário.csv", header=T, sep=";")
 attach(dados)
+
+library(usethis)
+use_git_config(user.name = "julyanegarcia",
+               user.email = "julyanegarcia@id.uff.br")
+              
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+
+# Verificando estrutura dos dados
+str(dados)
+
+# Análises descritivas - variáveis qualitativas
+prop.table(table(ingresso))
+prop.table(table(sexo))
+prop.table(table(grupo_sanguineo))
+prop.table(table(ingere_pao))
+prop.table(table(ingere_massa))
+prop.table(table(ingere_refri))
+prop.table(table(ingere_alcool))
+prop.table(table(fruta_gosta))
